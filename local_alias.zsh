@@ -112,7 +112,7 @@ find_acces_key() {
       printf "\r%sSearching...$i" "${clear_to_eol}"
       result=$(aws iam list-access-keys --output text --user-name "${i}" --query "AccessKeyMetadata[?AccessKeyId=='${1}'].UserName";)
       if [ -n "${result}" ]; then
-         printf "\r%s%s is owned by %s.\n" "${lear_to_eol}" "$1" "${result}"
+         printf "\r%s%s is owned by %s.\n" "${clear_to_eol}" "$1" "${result}"
          break
       fi
     done
