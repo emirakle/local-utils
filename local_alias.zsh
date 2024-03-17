@@ -2,7 +2,6 @@
 install_alias_prereq() {
     brew install jmespath/jmespath/jp
     brew install jq
-
 }
 
 whoiz() {
