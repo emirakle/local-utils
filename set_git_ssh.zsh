@@ -42,11 +42,13 @@ ssh_add_key_lt_12() {
 
 # For MacOS > v10.12.2
 ssh_start_agent_gt_10_12_2() {
-    util_ssh_config_gt_10_12_2
     # If you're using macOS Sierra 10.12.2 or later, 
     # you will need to modify your ~/.ssh/config file 
     # to automatically load keys into the ssh-agent and 
     # store passphrases in your keychain.
+
+    # Let's do it programmatically
+    util_ssh_config_gt_10_12_2
 }
 
 util_ssh_config_gt_10_12_2() {
